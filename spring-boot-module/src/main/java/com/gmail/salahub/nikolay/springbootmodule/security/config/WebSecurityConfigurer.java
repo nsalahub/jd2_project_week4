@@ -51,7 +51,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/403", "/login", "/home", "/public/**")
+                .antMatchers("/403", "/login", "/home")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -80,6 +80,4 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     public AccessDeniedHandler deniedHandler() {
         return new AppAccessDeniedHandler();
     }
-
-
 }

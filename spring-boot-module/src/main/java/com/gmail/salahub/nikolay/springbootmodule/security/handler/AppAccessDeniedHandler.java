@@ -20,8 +20,7 @@ public class AppAccessDeniedHandler implements AccessDeniedHandler {
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null) {
-            logger.info("try to access in protected resource:",
-                    authentication.getName(),
+            logger.info("acess processed:",authentication.getName(),
                     httpServletRequest.getRequestURI());
         }
         httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/403");

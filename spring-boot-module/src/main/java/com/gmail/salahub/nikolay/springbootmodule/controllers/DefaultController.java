@@ -17,7 +17,6 @@ public class DefaultController {
 
     @GetMapping("/login")
     public String showLoginPage(){
-
         return "login";
     }
 }
