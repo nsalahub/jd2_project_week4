@@ -5,6 +5,7 @@
 *.ipr
 **/target
 */mvnw/
+*.mvn
 
 # Maven
 **/log/
